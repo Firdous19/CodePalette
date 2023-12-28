@@ -33,6 +33,19 @@ struct node *insert_at_beg(struct node *tail, int data)
     return tail;
 }
 
+void traverse(struct node *tail)
+{
+    struct node *p;
+    p = tail->link;
+    do
+    {
+        printf("%d->",p->info);
+        p = p->link;
+    } while (p != tail->link);
+    
+    
+}
+
 int main()
 {
     struct node *tail;
