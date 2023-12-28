@@ -74,8 +74,18 @@ void traverse(struct node *tail)
         printf("%d->",p->info);
         p = p->link;
     } while (p != tail->link);
-    
-    
+}
+
+void count(struct node *tail)
+{
+    int count = 0;
+    struct node *p = tail->link;
+    while(p->link != tail->link)
+    {
+        p = p->link;
+        count++;
+    }
+    printf("There are %d no. of nodes inside the list", tail->info);
 }
 
 int main()
